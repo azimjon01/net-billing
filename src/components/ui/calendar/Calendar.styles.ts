@@ -56,3 +56,9 @@ export const YearText = styled.p((props) => ({
   fontWeight: 400,
   fontSize: 13,
 }));
+
+export const Grid = styled.div({
+  display: "flex",
+  flexDirection: "column",
+  gap: 8,
+});

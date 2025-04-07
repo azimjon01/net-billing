@@ -1,10 +1,12 @@
 import { ChevronIcon } from "../chevron-icon/ChevronIcon";
+import ResponsibleToggle from "../responsible-toggle/ResponsibleToggle";
 import {
   CalendarContainer,
   CalendarHeader,
   CalendarTitle,
   ChevronButton,
   FilterContainer,
+  Grid,
   Year,
   YearContainer,
   YearText,
@@ -34,9 +36,12 @@ const Calendar = () => {
                 />
               </ChevronButton>
             </YearContainer>
-            {/* shuyerga responsible toggle yozmoqchi bo'lib turgan edi */}
+            <ResponsibleToggle />
+            <ResponsibleToggle label="Входящие" />
+            <ResponsibleToggle label="Внутренние" />
           </FilterContainer>
         </CalendarHeader>
+        <Grid></Grid>
       </CalendarContainer>
     </>
   );

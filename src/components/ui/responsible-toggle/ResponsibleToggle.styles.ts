@@ -7,7 +7,7 @@ const sizeMap = {
 };
 
 const variantColors = {
-  primary: "#4CD964",
+  primary: "#5CCD70",
   secondary: "#007AFF",
   danger: "#FF3B30",
 };
@@ -64,3 +64,9 @@ export const Slider = styled.span<{
     transition: "left 0.3s",
   };
 });
+
+export const SliderTitle = styled.p((props) => ({
+  fontSize: 12,
+  fontWeight: 400,
+  color: props.theme.colors.primary,
+}));

@@ -3,6 +3,7 @@ import {
   HiddenCheckbox,
   Label,
   Slider,
+  SliderTitle,
   Switch,
   ToggleContainer,
 } from "./ResponsibleToggle.styles";
@@ -22,7 +23,7 @@ const ResponsibleToggle = ({
   checked,
   defaultChecked = false,
   onChange,
-  size = "sm",
+  size = "md",
   variant = "primary",
   label = "Я ответственный",
 }: ResponsibleToggleProps) => {
@@ -55,8 +56,8 @@ const ResponsibleToggle = ({
             variant={variant}
           >
             <Slider checked={isChecked} size={size} />
-            {label}
           </Switch>
+          <SliderTitle>{label}</SliderTitle>
         </Label>
       </ToggleContainer>
     </>
