@@ -10,6 +10,7 @@ import {
 } from "./Sidebar.styles";
 import ThemedIcon from "../../theme/ThemedIcon";
 import ControlPanel from "../../ui/control-panel";
+import Accordion from "../../ui/accordion/Accordion";
 
 type SidebarProps = {
   toggleTheme: () => void;
@@ -45,6 +46,7 @@ const Sidebar = ({ toggleTheme }: SidebarProps) => {
           </SidebarToggleLogoContainer>
         </SidebarHeader>
         <ControlPanel />
+        <Accordion />
       </SidebarContainer>
     </>
   );
