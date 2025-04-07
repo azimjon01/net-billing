@@ -16,7 +16,6 @@ export const Icon = styled.span<IconProps>(
     height,
     color,
     transform: `rotate(${rotate}deg)`,
-    transition: "transform 0.25s ease, color 0.25s ease",
     cursor: "pointer",
     img: {
       width: "100%",

@@ -6,9 +6,8 @@ export const PanelContainer = styled.div((props) => ({
   justifyContent: "space-between",
   gap: 4,
   alignItems: "center",
-  borderTop: "1px solid #fff",
-  borderBottom: "1px solid #fff",
-  borderColor: props.theme.colors.border,
+  borderTop: props.theme.borders.border,
+  borderBottom: props.theme.borders.border,
   padding: "12px 5px",
 }));
 
@@ -16,8 +15,7 @@ export const PanelHeader = styled.div((props) => ({
   display: "flex",
   justifyContent: "space-between",
   alignItems: "center",
-  borderColor: props.theme.colors.border,
-  border: "1px solid #fff",
+  border: props.theme.borders.border,
   borderRadius: 8,
   padding: 6,
   width: "100%",
@@ -36,10 +34,11 @@ export const Icon = styled.img({
   height: 20,
 });
 
-export const Title = styled.h2({
+export const Title = styled.h2((props) => ({
   fontWeight: 400,
   fontSize: 12,
-});
+  color: props.theme.colors.tertiary,
+}));
 
 interface ChevronProps {
   rotate?: number;
@@ -55,9 +54,11 @@ export const Chevron = styled.img<ChevronProps>(({ rotate = 0 }) => ({
 export const RegisterButton = styled.button((props) => ({
   width: "100%",
   background: props.theme.colors.secondary,
+  color: props.theme.colors.primary,
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
+  border: props.theme.borders.border,
   borderRadius: 8,
   padding: 6,
   gap: 4,

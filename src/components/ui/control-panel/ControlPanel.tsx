@@ -13,6 +13,7 @@ import {
 import { useToggle } from "../../../hooks/useToggle";
 import ControlDropdown from "./control-components/control-dropdown/ControlDropdown";
 import RegisterDocument from "./control-components/register-document/RegisterDocument";
+import { ChevronIcon } from "../chevron-icon/ChevronIcon";
 
 const ControlPanel: FC = () => {
   const [dropdownOpen, toggleDropdownOpen] = useToggle(false);
@@ -25,7 +26,17 @@ const ControlPanel: FC = () => {
             <Icon src="/assets/logos/sidebar/control-panel/computer-icon.svg" />
             <Title>Контроль</Title>
           </IconLeft>
-          <Chevron src="/assets/logos/sidebar/control-panel/chevron-down-icon.svg" />
+          {dropdownOpen ? (
+            <ChevronIcon
+              src="/assets/logos/sidebar/control-panel/chevron-down-icon.svg"
+              rotate={180}
+            />
+          ) : (
+            <ChevronIcon
+              src="/assets/logos/sidebar/control-panel/chevron-down-icon.svg"
+              rotate={0}
+            />
+          )}
         </PanelHeader>
 
         {dropdownOpen && <ControlDropdown />}

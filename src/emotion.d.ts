@@ -6,6 +6,7 @@ declare module "@emotion/react" {
     colors: {
       primary: string;
       secondary: string;
+      tertiary: string;
       purple: string;
       red: string;
       background: string;
@@ -18,6 +19,9 @@ declare module "@emotion/react" {
     };
     spacing: {
       lg: string;
+    };
+    borders: {
+      border: string;
     };
     borderRadius: string;
   }

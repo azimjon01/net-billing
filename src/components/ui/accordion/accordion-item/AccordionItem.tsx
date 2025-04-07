@@ -20,7 +20,17 @@ export const AccordionItem = ({ title, items }: Props) => {
       <AcoordionContainer>
         <AccordionHeader onClick={() => setOpen(!open)}>
           <AccordionTitle>{title}</AccordionTitle>
-          {open ? <ChevronIcon rotate={0} /> : <ChevronIcon rotate={180} />}
+          {open ? (
+            <ChevronIcon
+              rotate={180}
+              src="/assets/logos/sidebar/control-panel/chevron-down-icon.svg"
+            />
+          ) : (
+            <ChevronIcon
+              rotate={0}
+              src="/assets/logos/sidebar/control-panel/chevron-down-icon.svg"
+            />
+          )}
         </AccordionHeader>
 
         {open && (

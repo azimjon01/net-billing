@@ -4,7 +4,6 @@ export const SidebarContainer = styled.div<{ open: boolean }>((props) => ({
   width: props.open ? 250 : 37,
   transition: "width 0.3s ease",
   backgroundColor: props.theme.colors.primary,
-  padding: 4,
 }));
 
 export const SidebarHeader = styled.div({
@@ -12,7 +11,7 @@ export const SidebarHeader = styled.div({
   display: "flex",
   justifyContent: "space-between",
   alignItems: "center",
-  padding: "10px 8px",
+  padding: "16px 16px",
 });
 
 export const SidebarLogoContainer = styled.div<{ open: boolean }>((props) => ({
