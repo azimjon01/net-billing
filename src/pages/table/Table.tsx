@@ -1,7 +1,9 @@
+import Calendar from "../../components/ui/calendar/Calendar";
+
 const Table = () => {
   return (
     <>
-      <h1>Table</h1>
+      <Calendar />
     </>
   );
 };

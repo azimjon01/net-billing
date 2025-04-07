@@ -27,6 +27,13 @@ export const ChevronIcon = ({
     height={height}
     display={display}
   >
-    {src ? <img src={src} alt="chevron" /> : "⌄"}
+    {src ? (
+      <img src={src} alt="chevron" />
+    ) : (
+      <img
+        src="/assets/logos/sidebar/control-panel/chevron-down-icon.svg"
+        alt="chevron"
+      />
+    )}
   </Icon>
 );
