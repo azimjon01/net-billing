@@ -8,6 +8,7 @@ const Accordion = () => {
         <AccordionItem
           key={index}
           title={section.title}
+          externalIcon={section.externalIcon}
           items={section.items}
         />
       ))}

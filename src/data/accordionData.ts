@@ -1,62 +1,141 @@
 export const accordionData = [
   {
-    title: "Section 1",
+    title: "Главная",
+    externalIcon: "/assets/logos/sidebar/accordion/file-icon.svg",
     items: [
-      { label: "Item 1", path: "/item1" },
-      { label: "Item 2", path: "/item2" },
-      { label: "Item 3", path: "/item3" },
-      { label: "Item 4", path: "/item4" },
-      { label: "Item 5", path: "/item5" },
-      { label: "Item 6", path: "/item6" },
-      { label: "Item 7", path: "/item7" },
-      { label: "Item 8", path: "/item8" },
-      { label: "Item 9", path: "/item9" },
-      { label: "Item 10", path: "/item10" },
+      {
+        label: "Главная",
+        path: "/glavnaya",
+        internalIcon: "/assets/logos/sidebar/accordion/file-icon.svg",
+      },
     ],
   },
   {
-    title: "Section 2",
+    title: "Календарь",
+    externalIcon: "/assets/logos/sidebar/accordion/kalendar-icon.svg",
     items: [
-      { label: "Item 1", path: "/item1" },
-      { label: "Item 2", path: "/item2" },
-      { label: "Item 3", path: "/item3" },
-      { label: "Item 4", path: "/item4" },
-      { label: "Item 5", path: "/item5" },
-      { label: "Item 6", path: "/item6" },
-      { label: "Item 7", path: "/item7" },
-      { label: "Item 8", path: "/item8" },
-      { label: "Item 9", path: "/item9" },
-      { label: "Item 10", path: "/item10" },
+      {
+        label: "Календарь",
+        path: "/kalendar",
+        internalIcon: "/assets/logos/sidebar/accordion/file-icon.svg",
+      },
     ],
   },
   {
-    title: "Section 3",
+    title: "Направленные ответы",
+    externalIcon: "/assets/logos/sidebar/accordion/file-icon.svg",
     items: [
-      { label: "Item 1", path: "/item1" },
-      { label: "Item 2", path: "/item2" },
-      { label: "Item 3", path: "/item3" },
-      { label: "Item 4", path: "/item4" },
-      { label: "Item 5", path: "/item5" },
-      { label: "Item 6", path: "/item6" },
-      { label: "Item 7", path: "/item7" },
-      { label: "Item 8", path: "/item8" },
-      { label: "Item 9", path: "/item9" },
-      { label: "Item 10", path: "/item10" },
+      {
+        label: "Направленные ответы",
+        path: "/otvety",
+        internalIcon: "/assets/logos/sidebar/accordion/file-icon.svg",
+      },
     ],
   },
   {
-    title: "Section 4",
+    title: "Входящие документы",
+    externalIcon: "/assets/logos/sidebar/accordion/file-icon.svg",
     items: [
-      { label: "Item 1", path: "/item1" },
-      { label: "Item 2", path: "/item2" },
-      { label: "Item 3", path: "/item3" },
-      { label: "Item 4", path: "/item4" },
-      { label: "Item 5", path: "/item5" },
-      { label: "Item 6", path: "/item6" },
-      { label: "Item 7", path: "/item7" },
-      { label: "Item 8", path: "/item8" },
-      { label: "Item 9", path: "/item9" },
-      { label: "Item 10", path: "/item10" },
+      {
+        label: "Входящие документы",
+        path: "/vhod-docs",
+        internalIcon: "/assets/logos/sidebar/accordion/file-icon.svg",
+      },
+    ],
+  },
+  {
+    title: "Контроль обращений",
+    externalIcon: "/assets/logos/sidebar/accordion/file-icon.svg",
+    items: [
+      {
+        label: "Контроль обращений",
+        path: "/kontrol-obrash",
+        internalIcon: "/assets/logos/sidebar/accordion/file-icon.svg",
+      },
+    ],
+  },
+  {
+    title: "Исходящие документы",
+    externalIcon: "/assets/logos/sidebar/accordion/file-icon.svg",
+    items: [
+      {
+        label: "Исходящие документы",
+        path: "/isxod-docs",
+        internalIcon: "/assets/logos/sidebar/accordion/file-icon.svg",
+      },
+    ],
+  },
+  {
+    title: "Поступившие поручения",
+    externalIcon: "/assets/logos/sidebar/accordion/file-icon.svg",
+    items: [
+      {
+        label: "Поступившие поручения",
+        path: "/porucheniya",
+        internalIcon: "/assets/logos/sidebar/accordion/file-icon.svg",
+      },
+    ],
+  },
+  {
+    title: "Готовые внутренние документы",
+    externalIcon: "/assets/logos/sidebar/accordion/file-icon.svg",
+    items: [
+      {
+        label: "Готовые внутренние документы",
+        path: "/vnutrennie",
+        internalIcon: "/assets/logos/sidebar/accordion/file-icon.svg",
+      },
+    ],
+  },
+  {
+    title: "Статистика",
+    externalIcon: "/assets/logos/sidebar/accordion/file-icon.svg",
+    items: [
+      {
+        label: "Персонала",
+        path: "/statistika/personala",
+        internalIcon: "/assets/logos/sidebar/accordion/file-icon.svg",
+      },
+      {
+        label: "По подведомственным органам",
+        path: "/statistika/podvedomstvennim",
+        internalIcon: "/assets/logos/sidebar/accordion/file-icon.svg",
+      },
+      {
+        label: "Сотрудников департамента",
+        path: "/statistika/departament",
+        internalIcon: "/assets/logos/sidebar/accordion/file-icon.svg",
+      },
+      {
+        label: "Отделом",
+        path: "/statistika/otdelom",
+        internalIcon: "/assets/logos/sidebar/accordion/file-icon.svg",
+      },
+      {
+        label: "Согласований",
+        path: "/statistika/soglasovanie",
+        internalIcon: "/assets/logos/sidebar/accordion/file-icon.svg",
+      },
+      {
+        label: "Действия контролеров",
+        path: "/statistika/kontroler",
+        internalIcon: "/assets/logos/sidebar/accordion/file-icon.svg",
+      },
+      {
+        label: "Канцелярий",
+        path: "/statistika/kantselyariya",
+        internalIcon: "/assets/logos/sidebar/accordion/file-icon.svg",
+      },
+      {
+        label: "Сектор фишки",
+        path: "/statistika/sektor-fishki",
+        internalIcon: "/assets/logos/sidebar/accordion/file-icon.svg",
+      },
+      {
+        label: "Общее состояние документов",
+        path: "/statistika/obshie-dokumenty",
+        internalIcon: "/assets/logos/sidebar/accordion/file-icon.svg",
+      },
     ],
   },
 ];

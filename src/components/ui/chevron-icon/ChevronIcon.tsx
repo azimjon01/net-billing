@@ -7,22 +7,25 @@ interface ChevronIconProps {
   width?: number;
   height?: number;
   src?: string;
+  display?: string;
 }
 
 export const ChevronIcon = ({
   rotate = 0,
   size = 16,
   color = "#999",
-  width,
-  height,
+  width = 18,
+  height = 18,
   src,
+  display = "inline-block",
 }: ChevronIconProps) => (
   <Icon
     rotate={rotate}
     size={size}
     color={color}
-    width={width ?? size}
-    height={height ?? size}
+    width={width}
+    height={height}
+    display={display}
   >
     {src ? <img src={src} alt="chevron" /> : "⌄"}
   </Icon>
