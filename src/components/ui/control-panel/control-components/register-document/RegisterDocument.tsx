@@ -1,10 +1,14 @@
 import { ChangeEvent, FC, FormEvent, useState } from "react";
 import {
   Actions,
+  Exit,
   FileName,
+  HiddenInput,
+  InputLabel,
   RegisterContainer,
   RegisterModal,
   RegisterTitle,
+  Send,
 } from "./RegisterDocument.styles";
 
 interface Props {
@@ -44,15 +48,18 @@ const RegisterDocument: FC<Props> = ({ open, onClose }) => {
       <RegisterModal onSubmit={handleSubmit}>
         <RegisterTitle>📎Hujjatni Ro'yxatdan o'tkazish</RegisterTitle>
 
-        <input type="file" onChange={handleFileChange} />
-        {file && <FileName>Tanlangan fayl: {file.name}</FileName>}
+        <InputLabel>
+          Faylni tanlang +
+          <HiddenInput type="file" onChange={handleFileChange} />
+          {file && <FileName>Tanlangan fayl: {file.name}</FileName>}
+        </InputLabel>
 
         <Actions>
-          <button type="button" onClick={onClose}>
-            Yopish
-          </button>
-          <button type="submit">Yuborish</button>
+          <Send type="submit">Yuborish</Send>
         </Actions>
+        <Exit type="button" onClick={onClose}>
+          X
+        </Exit>
       </RegisterModal>
     </RegisterContainer>
   );

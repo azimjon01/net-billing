@@ -15,8 +15,8 @@ import ControlDropdown from "./control-components/control-dropdown/ControlDropdo
 import RegisterDocument from "./control-components/register-document/RegisterDocument";
 
 const ControlPanel: FC = () => {
-  const [dropdownOpen, toggleDropdownOpen] = useToggle();
-  const [modalOpen, toggleModal] = useToggle();
+  const [dropdownOpen, toggleDropdownOpen] = useToggle(false);
+  const [modalOpen, toggleModal] = useToggle(false);
   return (
     <>
       <PanelContainer>
@@ -30,7 +30,7 @@ const ControlPanel: FC = () => {
 
         {dropdownOpen && <ControlDropdown />}
 
-        <RegisterButton>
+        <RegisterButton onClick={toggleModal}>
           <RegisterIcon src="/assets/logos/sidebar/control-panel/plus-icon.svg" />
           <RegisterText>Регистрация документа</RegisterText>
         </RegisterButton>
