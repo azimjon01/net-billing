@@ -9,6 +9,7 @@ import {
   SidebarToggleLogoContainer,
 } from "./Sidebar.styles";
 import ThemedIcon from "../../theme/ThemedIcon";
+import ControlPanel from "../../ui/control-panel";
 
 type SidebarProps = {
   toggleTheme: () => void;
@@ -43,6 +44,7 @@ const Sidebar = ({ toggleTheme }: SidebarProps) => {
             />
           </SidebarToggleLogoContainer>
         </SidebarHeader>
+        <ControlPanel />
       </SidebarContainer>
     </>
   );

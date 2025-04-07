@@ -6,7 +6,7 @@ import Table from "../pages/table";
 
 const ROUTES_CONFIG = [
   {
-    path: "/",
+    path: "/calendar",
     element: <Table />,
   },
 ];
