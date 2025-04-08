@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 
 export const SidebarContainer = styled.div<{ open: boolean }>((props) => ({
   height: "100vh",
-  width: props.open ? 300 : 40,
+  width: props.open ? 300 : 60,
   transition: "width 0.3s ease",
   backgroundColor: props.theme.colors.primary,
   overflowY: "auto",

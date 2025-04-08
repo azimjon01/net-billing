@@ -1,6 +1,5 @@
 import { useState } from "react";
 import {
-  AccordionContainer,
   SidebarContainer,
   SidebarHeader,
   SidebarLogo,
@@ -46,8 +45,8 @@ const Sidebar = ({ toggleTheme }: SidebarProps) => {
             />
           </SidebarToggleLogoContainer>
         </SidebarHeader>
-        <ControlPanel />
-        <Accordion />
+        <ControlPanel open={open} />
+        <Accordion open={open} />
       </SidebarContainer>
     </>
   );

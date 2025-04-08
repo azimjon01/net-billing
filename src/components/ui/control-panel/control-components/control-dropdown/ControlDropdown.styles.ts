@@ -11,9 +11,18 @@ export const DropdownContainer = styled.div({
   gap: 12,
 });
 
-export const DropdownItem = styled(Link)({
+export const ItemContainer = styled(Link)<{ open: boolean }>((props) => ({
+  width: "100%",
+  display: "flex",
+  justifyContent: props.open ? "start" : "center",
+  alignItems: "center",
+  gap: 4,
+}));
+
+export const DropdownItem = styled.p<{ open: boolean }>((props) => ({
+  display: props.open ? "block" : "none",
   width: "100%",
   fontSize: 14,
   fontWeight: 400,
   color: "#fff",
-});
+}));

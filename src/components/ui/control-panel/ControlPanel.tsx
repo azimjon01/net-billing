@@ -15,7 +15,11 @@ import ControlDropdown from "./control-components/control-dropdown/ControlDropdo
 import RegisterDocument from "./control-components/register-document/RegisterDocument";
 import { ChevronIcon } from "../chevron-icon/ChevronIcon";
 
-const ControlPanel: FC = () => {
+interface ControlPanelProps {
+  open: boolean;
+}
+
+const ControlPanel: FC<ControlPanelProps> = ({ open }) => {
   const [dropdownOpen, toggleDropdownOpen] = useToggle(false);
   const [modalOpen, toggleModal] = useToggle(false);
   return (
@@ -25,8 +29,9 @@ const ControlPanel: FC = () => {
           <IconLeft onClick={toggleDropdownOpen}>
             <IconTop>
               <Icon src="/assets/logos/sidebar/control-panel/computer-icon.svg" />
-              <Title>Контроль</Title>
+              <Title open={open}>Контроль</Title>
             </IconTop>
+
             {dropdownOpen ? (
               <ChevronIcon
                 src="/assets/logos/sidebar/control-panel/chevron-down-icon.svg"
@@ -39,12 +44,12 @@ const ControlPanel: FC = () => {
               />
             )}
           </IconLeft>
-          {dropdownOpen && <ControlDropdown />}
+          {dropdownOpen && <ControlDropdown open={open} />}
         </PanelHeader>
 
         <RegisterButton onClick={toggleModal}>
           <RegisterIcon src="/assets/logos/sidebar/control-panel/plus-icon.svg" />
-          <RegisterText>Регистрация документа</RegisterText>
+          <RegisterText open={open}>Регистрация документа</RegisterText>
         </RegisterButton>
 
         <RegisterDocument open={modalOpen} onClose={toggleModal} />

@@ -16,14 +16,16 @@ export const AccordionHeader = styled.div({
   cursor: "pointer",
 });
 
-export const AcordionName = styled.div({
+export const AcordionName = styled.div<{ open: boolean }>((props) => ({
+  width: "100%",
   display: "flex",
-  justifyContent: "space-between",
+  justifyContent: props.open ? "start" : "center",
   alignItems: "center",
   gap: 4,
-});
+}));
 
-export const AccordionTitle = styled.h2((props) => ({
+export const AccordionTitle = styled.h2<{ open: boolean }>((props) => ({
+  display: props.open ? "block" : "none",
   color: props.theme.colors.tertiary,
   fontSize: 14,
   fontWeight: 300,

@@ -1,11 +1,16 @@
 import { accordionData } from "../../../data/accordionData";
 import { AccordionItem } from "./accordion-item/AccordionItem";
 
-const Accordion = () => {
+interface AccordionProps {
+  open: boolean;
+}
+
+const Accordion = ({ open }: AccordionProps) => {
   return (
     <>
       {accordionData.map((section, index) => (
         <AccordionItem
+          open={open}
           key={index}
           title={section.title}
           externalIcon={section.externalIcon}

@@ -42,7 +42,8 @@ export const Icon = styled.img({
   height: 20,
 });
 
-export const Title = styled.h2((props) => ({
+export const Title = styled.h2<{ open: boolean }>((props) => ({
+  display: props.open ? "block" : "none",
   fontWeight: 400,
   fontSize: 12,
   color: props.theme.colors.tertiary,
@@ -78,8 +79,9 @@ export const RegisterIcon = styled.img({
   height: 18,
 });
 
-export const RegisterText = styled.p({
+export const RegisterText = styled.p<{ open: boolean }>((props) => ({
+  display: props.open ? "flex" : "none",
   color: "#000",
   fontWeight: 400,
   fontSize: 12,
-});
+}));

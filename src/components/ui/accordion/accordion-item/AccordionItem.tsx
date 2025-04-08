@@ -14,19 +14,20 @@ interface Props {
   title: string;
   externalIcon: string;
   items: { label: string; path: string; internalIcon: string }[];
+  open: boolean;
 }
 
-export const AccordionItem = ({ title, externalIcon, items }: Props) => {
-  const [open, setOpen] = useState(false);
+export const AccordionItem = ({ title, externalIcon, items, open }: Props) => {
+  const [iopen, setOpen] = useState(false);
   return (
     <ContainerScroll>
       <AcoordionContainer>
-        <AccordionHeader onClick={() => setOpen(!open)}>
-          <AcordionName>
+        <AccordionHeader onClick={() => setOpen(!iopen)}>
+          <AcordionName open={open}>
             <ChevronIcon src={externalIcon} width={18} height={18} />
-            <AccordionTitle>{title}</AccordionTitle>
+            <AccordionTitle open={open}>{title}</AccordionTitle>
           </AcordionName>
-          {open ? (
+          {iopen ? (
             <ChevronIcon
               rotate={0}
               src="/assets/logos/sidebar/control-panel/chevron-down-icon.svg"
@@ -40,12 +41,12 @@ export const AccordionItem = ({ title, externalIcon, items }: Props) => {
           )}
         </AccordionHeader>
 
-        {open && (
+        {iopen && (
           <ItemList>
             {items.map((item, i) => (
               <StyledLink key={i} to={item.path}>
                 <ChevronIcon src={item.internalIcon} width={18} height={18} />
-                {item.label}
+                <AccordionTitle open={open}>{item.label}</AccordionTitle>
               </StyledLink>
             ))}
           </ItemList>
