@@ -12,6 +12,7 @@ export const DropdownContainer = styled.div({
 });
 
 export const DropdownItem = styled(Link)({
+  width: "100%",
   fontSize: 14,
   fontWeight: 400,
   color: "#fff",
