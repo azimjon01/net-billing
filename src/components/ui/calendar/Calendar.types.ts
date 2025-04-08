@@ -1,4 +1,4 @@
-export type EventType = "responsible" | "outgoing" | "internal";
+export type EventType = "responsible" | "outgoing";
 
 export interface CalendarDay {
   date: number;

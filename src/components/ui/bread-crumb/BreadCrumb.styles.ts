@@ -6,7 +6,7 @@ export const Wrapper = styled.div({
 });
 
 export const Crumb = styled.span({
-  color: "#fff",
+  color: "#AEB3CB",
   fontWeight: 400,
   fontSize: 14,
 
@@ -19,3 +19,17 @@ export const Crumb = styled.span({
     content: '""',
   },
 });
+
+export const Internal = styled.span((props) => ({
+  color: props.theme.colors.tertiary,
+  fontWeight: 400,
+  fontSize: 14,
+  "&::after": {
+    content: '"/"',
+    color: "#777",
+  },
+
+  "&:last-of-type::after": {
+    content: '""',
+  },
+}));

@@ -1,6 +1,6 @@
 import { useLocation } from "react-router-dom";
 import { breadCrumbMap } from "./BreadCrumbMap";
-import { Crumb, Wrapper } from "./BreadCrumb.styles";
+import { Crumb, Internal, Wrapper } from "./BreadCrumb.styles";
 
 export const BreadCrumb = () => {
   const location = useLocation();
@@ -13,7 +13,9 @@ export const BreadCrumb = () => {
     return label ? <Crumb key={path}> {label}</Crumb> : null;
   });
 
-  return <Wrapper>{[<Crumb key="/">Главная</Crumb>, ...crumbs]}</Wrapper>;
+  return (
+    <Wrapper>{[<Internal key="/">Главная </Internal>, ".", ...crumbs]}</Wrapper>
+  );
 };
 
 export default BreadCrumb;

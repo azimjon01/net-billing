@@ -9,9 +9,9 @@ export const getCalendarWeeks = (
 
   const firstDayOfMonth = new Date(year, month, 1);
   const current = new Date(firstDayOfMonth);
-  current.setDate(current.getDate() - ((current.getDay() + 6) % 7)); // Dushanbaga surish
+  current.setDate(current.getDate() - ((current.getDay() + 6) % 7));
 
-  const endDate = new Date(year, month + 1, 1); // keyingi oy boshi
+  const endDate = new Date(year, month + 1, 1);
 
   while (current < endDate || current.getDay() !== 1) {
     const week: CalendarDay[] = [];
@@ -42,9 +42,9 @@ const generateFakeEvents = (date: Date): { type: EventType }[] => {
   const result: { type: EventType }[] = [];
   if (day % 5 === 0) result.push({ type: "responsible" });
   if (day % 3 === 0) result.push({ type: "outgoing" });
-  if (day % 7 === 0) result.push({ type: "internal" });
+  if (day % 7 === 0) result.push({ type: "responsible" });
   if (day % 2 === 0) result.push({ type: "responsible" });
   if (day % 4 === 0) result.push({ type: "outgoing" });
-  if (day % 6 === 0) result.push({ type: "internal" });
+  if (day % 6 === 0) result.push({ type: "outgoing" });
   return result;
 };

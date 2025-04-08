@@ -14,7 +14,7 @@ export const CalendarHeader = styled.div({
 
 export const CalendarTitle = styled.h1((props) => ({
   fontSize: 20,
-  fontWeight: 500,
+  fontWeight: 700,
   color: props.theme.colors.primary,
 }));
 
@@ -47,7 +47,7 @@ export const ChevronButton = styled.button(({ rotate }: CevronButtonProps) => ({
 }));
 
 export const Year = styled.div({
-  padding: "8.3px 13px",
+  padding: "8.3px 8px",
   background: "#EDF1F4",
 });
 
@@ -67,15 +67,16 @@ export const WeekdayRow = styled.div({
   gridTemplateColumns: "repeat(7,1fr)",
 });
 
-export const WeekdayCell = styled.div({
+export const WeekdayCell = styled.div((props) => ({
   border: "1px solid #f0f0f0",
+  color: props.theme.colors.primary,
   padding: 10,
   display: "flex",
   flexDirection: "column",
   justifyContent: "space-between",
   fontSize: 14,
   textAlign: "center",
-});
+}));
 
 export const WeekRow = styled.div({
   display: "grid",

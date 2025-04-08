@@ -1,7 +1,6 @@
 export const eventColors = {
-  responsible: "#6a0dad",
-  outgoing: "#ff4d4f",
-  internal: "#1890ff",
+  responsible: "#9747FF",
+  outgoing: "#FF4B55",
 };
 
 export const WEEKDAYS = [
