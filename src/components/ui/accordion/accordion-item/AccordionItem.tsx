@@ -5,6 +5,7 @@ import {
   AccordionTitle,
   AcoordionContainer,
   AcordionName,
+  ContainerScroll,
   ItemList,
   StyledLink,
 } from "./AccordionItem.styles";
@@ -18,11 +19,11 @@ interface Props {
 export const AccordionItem = ({ title, externalIcon, items }: Props) => {
   const [open, setOpen] = useState(false);
   return (
-    <>
+    <ContainerScroll>
       <AcoordionContainer>
         <AccordionHeader onClick={() => setOpen(!open)}>
           <AcordionName>
-            <ChevronIcon src={externalIcon} width={14} height={14} />
+            <ChevronIcon src={externalIcon} width={18} height={18} />
             <AccordionTitle>{title}</AccordionTitle>
           </AcordionName>
           {open ? (
@@ -43,13 +44,13 @@ export const AccordionItem = ({ title, externalIcon, items }: Props) => {
           <ItemList>
             {items.map((item, i) => (
               <StyledLink key={i} to={item.path}>
-                <ChevronIcon src={item.internalIcon} width={14} height={14} />
+                <ChevronIcon src={item.internalIcon} width={18} height={18} />
                 {item.label}
               </StyledLink>
             ))}
           </ItemList>
         )}
       </AcoordionContainer>
-    </>
+    </ContainerScroll>
   );
 };

@@ -1,8 +1,13 @@
 import styled from "@emotion/styled";
 import { Link } from "react-router-dom";
 
+export const ContainerScroll = styled.div({
+  overflowY: "auto",
+  height: "100%",
+});
+
 export const AcoordionContainer = styled.div({
-  padding: "4px 3px",
+  padding: "8px 5px",
 });
 
 export const AccordionHeader = styled.div({
@@ -21,7 +26,7 @@ export const AcordionName = styled.div({
 
 export const AccordionTitle = styled.h2((props) => ({
   color: props.theme.colors.tertiary,
-  fontSize: 10,
+  fontSize: 14,
   fontWeight: 300,
 }));
 
@@ -35,7 +40,7 @@ export const StyledLink = styled(Link)({
   display: "flex",
   justifyContent: "start",
   alignItems: "center",
-  fontSize: 10,
+  fontSize: 14,
   gap: 4,
   color: "#aaa",
   padding: "6px 0",
