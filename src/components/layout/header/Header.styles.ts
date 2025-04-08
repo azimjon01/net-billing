@@ -60,6 +60,7 @@ export const ModalContent = styled.div((props) => ({
   borderRadius: 8,
   width: "250px",
   boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)",
+  zIndex: 100,
 }));
 
 export const CloseButton = styled.button({

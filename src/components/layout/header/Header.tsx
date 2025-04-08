@@ -3,13 +3,11 @@ import BreadCrumb from "../../ui/bread-crumb";
 import { ChevronIcon } from "../../ui/chevron-icon/ChevronIcon";
 import {
   ChevronContainer,
-  CloseButton,
   HeaderContainer,
   HeaderIcon,
   HeaderIconsContainer,
   HeaderIconWrapper,
   ModalContent,
-  ModalOverlay,
 } from "./Header.styles";
 
 const Header = () => {
@@ -27,12 +25,12 @@ const Header = () => {
             <ChevronContainer onClick={toggleOpen}>
               {open ? (
                 <ChevronIcon
-                  rotate={0}
+                  rotate={180}
                   src="/assets/logos/sidebar/control-panel/chevron-down-icon.svg"
                 />
               ) : (
                 <ChevronIcon
-                  rotate={180}
+                  rotate={0}
                   src="/assets/logos/sidebar/control-panel/chevron-down-icon.svg"
                 />
               )}
