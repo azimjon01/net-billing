@@ -1,9 +1,23 @@
 import styled from "@emotion/styled";
 
 export const SidebarContainer = styled.div<{ open: boolean }>((props) => ({
+  height: "100vh",
   width: props.open ? 300 : 40,
   transition: "width 0.3s ease",
   backgroundColor: props.theme.colors.primary,
+  overflowY: "auto",
+  overflowX: "hidden",
+  "&::-webkit-scrollbar-thumb": {
+    backgroundColor: "#888",
+    borderRadius: "4px",
+  },
+  "&::-webkit-scrollbar-track": {
+    backgroundColor: "#1a2548",
+  },
+  scrollbarWidth: "none",
+  "&::-webkit-scrollbar": {
+    display: "none",
+  },
 }));
 
 export const SidebarHeader = styled.div({

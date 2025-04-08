@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 
 export const ContainerScroll = styled.div({
   overflowY: "auto",
-  height: "100%",
 });
 
 export const AcoordionContainer = styled.div({
