@@ -8,6 +8,7 @@ export const lightTheme = {
     red: "#FF4B55",
     background: "#FFFFFF",
     text: "#000000",
+    border: "1px solid #343F5B",
   },
   font: {
     base: "'Inter', sans-serif",
@@ -17,7 +18,7 @@ export const lightTheme = {
     lg: "4px",
   },
   borders: {
-    border: "1px solid #343F5B",
+    border: "1px solid #E5E7E7",
   },
   borderRadius: "50%",
 };
@@ -30,8 +31,9 @@ export const darkTheme = {
     tertiary: "#F7FCFC",
     purple: "#9747FF",
     red: "#FF4B55",
-    background: "#000000",
-    text: "#FFFFFF",
+    background: "#191E36",
+    text: "#F7FCFC",
+    border: "1px solid #343F5B",
   },
   font: {
     base: "'Inter', sans-serif",

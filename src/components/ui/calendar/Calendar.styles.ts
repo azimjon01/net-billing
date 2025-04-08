@@ -5,17 +5,18 @@ export const CalendarContainer = styled.div({
   flexDirection: "column",
 });
 
-export const CalendarHeader = styled.div({
+export const CalendarHeader = styled.div((props) => ({
   display: "flex",
   justifyContent: "space-between",
   alignItems: "center",
   padding: "10px 20px",
-});
+  border: props.theme.borders.border,
+}));
 
 export const CalendarTitle = styled.h1((props) => ({
   fontSize: 20,
   fontWeight: 700,
-  color: props.theme.colors.primary,
+  color: props.theme.colors.text,
 }));
 
 export const FilterContainer = styled.div({
@@ -68,8 +69,8 @@ export const WeekdayRow = styled.div({
 });
 
 export const WeekdayCell = styled.div((props) => ({
-  border: "1px solid #f0f0f0",
-  color: props.theme.colors.primary,
+  border: props.theme.borders.border,
+  color: props.theme.colors.text,
   padding: 10,
   display: "flex",
   flexDirection: "column",
@@ -85,9 +86,10 @@ export const WeekRow = styled.div({
 
 export const DayCell = styled.div<{ isToday: boolean; dim: boolean }>(
   (props) => ({
-    backgroundColor: props.isToday ? "#e6f7ff" : "#fff",
+    backgroundColor: props.isToday ? "#F7FCFC" : props.theme.colors.background,
     opacity: props.dim ? 0.5 : 1,
-    border: "1px solid #f0f0f0",
+    border: props.theme.borders.border,
+    color: props.isToday ? "#9747FF" : props.theme.colors.text,
     padding: 10,
     minHeight: 101.9,
     display: "flex",
@@ -97,3 +99,16 @@ export const DayCell = styled.div<{ isToday: boolean; dim: boolean }>(
     textAlign: "left",
   }),
 );
+
+export const DataContainer = styled.div({
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "center",
+  textAlign: "start",
+  gap: 4,
+});
+
+export const DayName = styled.p({
+  fontSize: 10,
+  fontWeight: 500,
+});

@@ -6,8 +6,8 @@ export const PanelContainer = styled.div((props) => ({
   justifyContent: "space-between",
   gap: 4,
   alignItems: "center",
-  borderTop: props.theme.borders.border,
-  borderBottom: props.theme.borders.border,
+  borderTop: props.theme.colors.border,
+  borderBottom: props.theme.colors.border,
   padding: "12px 5px",
 }));
 
@@ -16,7 +16,7 @@ export const PanelHeader = styled.div((props) => ({
   flexDirection: "column",
   justifyContent: "space-between",
   alignItems: "center",
-  border: props.theme.borders.border,
+  border: props.theme.colors.border,
   borderRadius: 8,
   padding: 6,
   width: "100%",
@@ -67,7 +67,7 @@ export const RegisterButton = styled.button((props) => ({
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
-  border: props.theme.borders.border,
+  border: props.theme.colors.border,
   borderRadius: 8,
   padding: 6,
   gap: 4,

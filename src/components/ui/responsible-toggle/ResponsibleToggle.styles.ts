@@ -68,5 +68,5 @@ export const Slider = styled.span<{
 export const SliderTitle = styled.p((props) => ({
   fontSize: 13,
   fontWeight: 500,
-  color: props.theme.colors.primary,
+  color: props.theme.colors.text,
 }));

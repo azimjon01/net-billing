@@ -6,7 +6,9 @@ import {
   CalendarHeader,
   CalendarTitle,
   ChevronButton,
+  DataContainer,
   DayCell,
+  DayName,
   FilterContainer,
   Grid,
   WeekdayCell,
@@ -84,7 +86,10 @@ const Calendar = () => {
                   isToday={day.isToday}
                   dim={!day.isCurrentMonth}
                 >
-                  <div>{day.date}</div>
+                  <DataContainer>
+                    <div>{day.date}</div>
+                    {day.isToday && <DayName>Сегодня</DayName>}
+                  </DataContainer>
                   <div style={{ display: "flex", gap: 4, marginTop: 4 }}>
                     {day.events.map((ev, i) => (
                       <EventDot key={i} type={ev.type} />
