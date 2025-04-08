@@ -14,7 +14,7 @@ export const BreadCrumb = () => {
   });
 
   return (
-    <Wrapper>{[<Internal key="/">Главная </Internal>, ".", ...crumbs]}</Wrapper>
+    <Wrapper>{[<Internal key="/">Главная </Internal>, ...crumbs]}</Wrapper>
   );
 };
 

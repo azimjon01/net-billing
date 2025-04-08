@@ -3,6 +3,8 @@ import styled from "@emotion/styled";
 export const Wrapper = styled.div({
   display: "flex",
   alignItems: "center",
+  justifyContent: "space-between",
+  gap: 3,
 });
 
 export const Crumb = styled.span({
