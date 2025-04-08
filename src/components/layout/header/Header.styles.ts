@@ -26,6 +26,7 @@ export const HeaderIcon = styled.img({
   width: 30,
   height: 30,
   borderRadius: 7,
+  cursor: "pointer",
 });
 
 export const ChevronContainer = styled.div({});

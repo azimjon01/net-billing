@@ -1,8 +1,8 @@
 import { FC } from "react";
 import {
-  Chevron,
   Icon,
   IconLeft,
+  IconTop,
   PanelContainer,
   PanelHeader,
   RegisterButton,
@@ -21,25 +21,26 @@ const ControlPanel: FC = () => {
   return (
     <>
       <PanelContainer>
-        <PanelHeader onClick={toggleDropdownOpen}>
-          <IconLeft>
-            <Icon src="/assets/logos/sidebar/control-panel/computer-icon.svg" />
-            <Title>Контроль</Title>
+        <PanelHeader>
+          <IconLeft onClick={toggleDropdownOpen}>
+            <IconTop>
+              <Icon src="/assets/logos/sidebar/control-panel/computer-icon.svg" />
+              <Title>Контроль</Title>
+            </IconTop>
+            {dropdownOpen ? (
+              <ChevronIcon
+                src="/assets/logos/sidebar/control-panel/chevron-down-icon.svg"
+                rotate={180}
+              />
+            ) : (
+              <ChevronIcon
+                src="/assets/logos/sidebar/control-panel/chevron-down-icon.svg"
+                rotate={0}
+              />
+            )}
           </IconLeft>
-          {dropdownOpen ? (
-            <ChevronIcon
-              src="/assets/logos/sidebar/control-panel/chevron-down-icon.svg"
-              rotate={180}
-            />
-          ) : (
-            <ChevronIcon
-              src="/assets/logos/sidebar/control-panel/chevron-down-icon.svg"
-              rotate={0}
-            />
-          )}
+          {dropdownOpen && <ControlDropdown />}
         </PanelHeader>
-
-        {dropdownOpen && <ControlDropdown />}
 
         <RegisterButton onClick={toggleModal}>
           <RegisterIcon src="/assets/logos/sidebar/control-panel/plus-icon.svg" />

@@ -1,18 +1,18 @@
 import styled from "@emotion/styled";
+import { Link } from "react-router-dom";
 
-export const DropdownContainer = styled.div((props) => ({
+export const DropdownContainer = styled.div({
   width: "100%",
   display: "flex",
   flexDirection: "column",
   justifyContent: "space-between",
   alignItems: "start",
-  border: "1px solid #fff",
-  borderColor: props.theme.colors.border,
-  borderRadius: 8,
-  padding: 6,
-  gap: 4,
-}));
+  padding: "8px 5px",
+  gap: 12,
+});
 
-export const DropdownItem = styled.h3({
-  fontSize: 12,
+export const DropdownItem = styled(Link)({
+  fontSize: 14,
+  fontWeight: 400,
+  color: "#fff",
 });

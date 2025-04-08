@@ -13,6 +13,7 @@ export const PanelContainer = styled.div((props) => ({
 
 export const PanelHeader = styled.div((props) => ({
   display: "flex",
+  flexDirection: "column",
   justifyContent: "space-between",
   alignItems: "center",
   border: props.theme.borders.border,
@@ -24,9 +25,16 @@ export const PanelHeader = styled.div((props) => ({
 
 export const IconLeft = styled.div({
   display: "flex",
-  gap: 6,
+  width: "100%",
   justifyContent: "space-between",
   alignItems: "center",
+});
+
+export const IconTop = styled.div({
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  gap: 6,
 });
 
 export const Icon = styled.img({

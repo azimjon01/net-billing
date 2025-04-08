@@ -13,18 +13,20 @@ export const RegisterContainer = styled.div({
   zIndex: 100,
 });
 
-export const RegisterModal = styled.form({
+export const RegisterModal = styled.form((props) => ({
   position: "relative",
-  background: "#fff",
+  background: props.theme.colors.primary,
+  color: props.theme.colors.text,
   borderRadius: 10,
   padding: 20,
   minWidth: 320,
   display: "flex",
   flexDirection: "column",
   gap: 16,
-});
+}));
 
 export const RegisterTitle = styled.h3({
+  color: "#fff",
   margin: 0,
   fontSize: 18,
 });
