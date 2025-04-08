@@ -21,7 +21,7 @@ interface ResponsibleToggleProps {
 const ResponsibleToggle = ({
   disabled = false,
   checked,
-  defaultChecked = false,
+  defaultChecked = true,
   onChange,
   size = "md",
   variant = "primary",

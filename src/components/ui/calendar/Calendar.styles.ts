@@ -1,6 +1,7 @@
 import styled from "@emotion/styled";
 
 export const CalendarContainer = styled.div({
+  height: "100%",
   display: "flex",
   flexDirection: "column",
 });
@@ -61,11 +62,14 @@ export const YearText = styled.p((props) => ({
 export const Grid = styled.div({
   display: "flex",
   flexDirection: "column",
+  flex: 1,
+  overflow: "hidden",
 });
 
 export const WeekdayRow = styled.div({
   display: "grid",
   gridTemplateColumns: "repeat(7,1fr)",
+  gridTemplateRows: "1fr",
 });
 
 export const WeekdayCell = styled.div((props) => ({
@@ -80,8 +84,10 @@ export const WeekdayCell = styled.div((props) => ({
 }));
 
 export const WeekRow = styled.div({
+  height: "100%",
   display: "grid",
   gridTemplateColumns: "repeat(7,1fr)",
+  gridTemplateRows: "1fr",
 });
 
 export const DayCell = styled.div<{ isToday: boolean; dim: boolean }>(
@@ -91,7 +97,6 @@ export const DayCell = styled.div<{ isToday: boolean; dim: boolean }>(
     border: props.theme.borders.border,
     color: props.isToday ? "#9747FF" : props.theme.colors.text,
     padding: 10,
-    minHeight: 101.9,
     display: "flex",
     flexDirection: "column",
     justifyContent: "space-between",
