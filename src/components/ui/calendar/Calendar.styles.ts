@@ -60,5 +60,39 @@ export const YearText = styled.p((props) => ({
 export const Grid = styled.div({
   display: "flex",
   flexDirection: "column",
-  gap: 8,
 });
+
+export const WeekdayRow = styled.div({
+  display: "grid",
+  gridTemplateColumns: "repeat(7,1fr)",
+});
+
+export const WeekdayCell = styled.div({
+  border: "1px solid #f0f0f0",
+  padding: 10,
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "space-between",
+  fontSize: 14,
+  textAlign: "center",
+});
+
+export const WeekRow = styled.div({
+  display: "grid",
+  gridTemplateColumns: "repeat(7,1fr)",
+});
+
+export const DayCell = styled.div<{ isToday: boolean; dim: boolean }>(
+  (props) => ({
+    backgroundColor: props.isToday ? "#e6f7ff" : "#fff",
+    opacity: props.dim ? 0.5 : 1,
+    border: "1px solid #f0f0f0",
+    padding: 10,
+    minHeight: 80,
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "space-between",
+    fontSize: 14,
+    textAlign: "left",
+  }),
+);
