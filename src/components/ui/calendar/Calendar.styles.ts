@@ -88,7 +88,7 @@ export const DayCell = styled.div<{ isToday: boolean; dim: boolean }>(
     opacity: props.dim ? 0.5 : 1,
     border: "1px solid #f0f0f0",
     padding: 10,
-    minHeight: 80,
+    minHeight: 101.9,
     display: "flex",
     flexDirection: "column",
     justifyContent: "space-between",
