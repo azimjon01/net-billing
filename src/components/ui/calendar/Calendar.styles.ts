@@ -102,6 +102,7 @@ export const DayCell = styled.div<{ isToday: boolean; dim: boolean }>(
     justifyContent: "space-between",
     fontSize: 14,
     textAlign: "left",
+    cursor: "pointer",
   }),
 );
 
