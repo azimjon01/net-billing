@@ -17,23 +17,35 @@ type SidebarProps = {
 };
 
 const Sidebar = ({ toggleTheme }: SidebarProps) => {
-  const [open, setOpen] = useState(true);
+  const [hovered, setHovered] = useState(false);
+  const [locked, setLocked] = useState(false);
+
+  const isSidebarOpen = hovered || locked;
+
+  const handleToggle = () => {
+    setLocked((prev) => !prev);
+  };
+
   return (
     <>
-      <SidebarContainer open={open}>
+      <SidebarContainer
+        open={isSidebarOpen}
+        onMouseEnter={() => setHovered(true)}
+        onMouseLeave={() => setHovered(!locked ? false : true)}
+      >
         <SidebarHeader>
-          <SidebarLogoContainer open={open}>
+          <SidebarLogoContainer open={isSidebarOpen}>
             <SidebarLogo src="/assets/logos/sidebar/sidebar-header/logo.svg" />
             <SidebarTitle>HET BILLING</SidebarTitle>
           </SidebarLogoContainer>
           <ThemedIcon
             light={
-              <SidebarThemeIcon open={open} onClick={toggleTheme}>
+              <SidebarThemeIcon open={isSidebarOpen} onClick={toggleTheme}>
                 🌘
               </SidebarThemeIcon>
             }
             dark={
-              <SidebarThemeIcon open={open} onClick={toggleTheme}>
+              <SidebarThemeIcon open={isSidebarOpen} onClick={toggleTheme}>
                 🌕
               </SidebarThemeIcon>
             }
@@ -41,12 +53,15 @@ const Sidebar = ({ toggleTheme }: SidebarProps) => {
           <SidebarToggleLogoContainer>
             <SidebarLogo
               src="/assets/logos/sidebar/sidebar-header/toggle-icon.svg"
-              onClick={() => setOpen(!open)}
+              onClick={() => {
+                handleToggle();
+                setHovered(false);
+              }}
             />
           </SidebarToggleLogoContainer>
         </SidebarHeader>
-        <ControlPanel open={open} />
-        <Accordion open={open} />
+        <ControlPanel open={isSidebarOpen} />
+        <Accordion open={isSidebarOpen} />
       </SidebarContainer>
     </>
   );

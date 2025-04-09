@@ -1,12 +1,14 @@
 import styled from "@emotion/styled";
 
 export const SidebarContainer = styled.div<{ open: boolean }>((props) => ({
+  overflowX: "hidden",
   height: "100vh",
   width: props.open ? 300 : 60,
   transition: "width 0.3s ease",
   backgroundColor: props.theme.colors.primary,
-  overflowY: "auto",
-  overflowX: "hidden",
+  overflowY: props.open ? "auto" : "hidden",
+  position: "relative",
+
   "&::-webkit-scrollbar-thumb": {
     backgroundColor: "#888",
     borderRadius: "4px",
@@ -25,7 +27,7 @@ export const SidebarHeader = styled.div({
   display: "flex",
   justifyContent: "space-between",
   alignItems: "center",
-  padding: "16px 16px",
+  padding: "16px",
 });
 
 export const SidebarLogoContainer = styled.div<{ open: boolean }>((props) => ({

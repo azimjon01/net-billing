@@ -1,9 +1,7 @@
 import styled from "@emotion/styled";
 import { Link } from "react-router-dom";
 
-export const ContainerScroll = styled.div({
-  overflowY: "auto",
-});
+export const ContainerScroll = styled.div({});
 
 export const AcoordionContainer = styled.div({
   padding: "8px 5px",
